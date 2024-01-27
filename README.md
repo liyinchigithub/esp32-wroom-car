@@ -149,13 +149,36 @@ L298N电机驱动板通常需要四个控制引脚来驱动一个双电机：
 
 - <img src="https://github.com/liyinchigithub/esp8266_car_webServer/assets/19643260/63b7af22-43ba-44dd-9fcb-7d5651c6fffd" width="300" height="300">
 
-## 遥控按钮页面
+## 遥控按钮
+
+### 虚拟网页按键
 
 1.程序烧入ESP32主板后，生成wifi热点：“遥控小车”；
 2.使用手机或平板连接热点密码：12345678
 3.浏览器地址：http://192.168.4.1
 
 <img width="300" height="600" alt="image" src="https://github.com/liyinchigithub/esp8266_car_webServer/assets/19643260/7ca61931-389f-4d21-8b0d-e1590c4028b9">
+
+
+### 实体键
+
+要实现一个ESP32作为遥控器端（esp32_wroom_car_client.ino），需要连接4个按钮到ESP32的GPIO引脚，并且当按钮被按下时，发送HTTP POST请求到另一个作为服务器端的ESP32（esp32_wroom_car_server.ino）。
+
+
+1. 连接每个按钮的一个引脚到ESP32的GPIO引脚，另一个引脚连接到GND。
+2. 在客户端代码中配置WiFi连接，以便它可以连接到服务器端ESP32创建的热点。
+3. 为每个按钮设置GPIO引脚模式为输入，并启用内部上拉电阻。
+4. 在主循环中检测按钮是否被按下，并发送相应的HTTP POST请求到服务器端。
+
+
+
+
+
+
+
+
+
+
 
 
 ## 常见问题
