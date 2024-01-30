@@ -1,4 +1,4 @@
-#  基于ESP32 开发板（MCU）遥控小车
+![image](https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7)#  基于ESP32 开发板（MCU）遥控小车
 
 嵌入式单片机ESP32Arduino 遥控小车（蓝牙版）
 
@@ -16,15 +16,19 @@ ESP32主板1个、步进器1个（电机驱动）、3.7V电池1个（18000mAh）
 
 ### 一、ESP32 NodeMCU 单片机
 
-<img src="" width="300" height="400">
+<img width="365" height="400" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/e6ebd268-c613-4dea-a880-9615511edd12">
 
 拓展板
 
-<img src="" width="300" height="400">
+由于ESP32引脚数量有限，使用拓展板来引出更多引脚
 
-备注：ESP32引脚数量有限，使用拓展板来引出更多引脚
+<img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/21d62036-0074-4e62-9f35-d0631dcf5300" width="300" height="300">
+
+<img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/adbd6298-c639-4156-8168-7d458b13f5d5" width="300" height="300">
 
 #### 引脚图
+
+esp32 wroom
 
 <img src="" width="400" height="300">
 
