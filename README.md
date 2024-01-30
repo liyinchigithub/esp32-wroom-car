@@ -1,9 +1,8 @@
-![image](https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7)#  基于ESP32 开发板（MCU）遥控小车
+#  基于ESP32 开发板（MCU）遥控小车
 
 嵌入式单片机ESP32Arduino 遥控小车（蓝牙版）
 
-<img src="" width="300" height="300">
-
+<img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7" width="300" height="300">
 
 ## 材料
 
@@ -30,7 +29,7 @@ ESP32主板1个、步进器1个（电机驱动）、3.7V电池1个（18000mAh）
 
 esp32 wroom
 
-<img src="" width="400" height="300">
+<img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/607f451c-f70f-4ad8-9b41-46fbe9717606" width="400" height="300">
 
 #### Arduino IDE 安装ESP32Audio库
 
