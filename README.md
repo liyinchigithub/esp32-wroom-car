@@ -46,21 +46,27 @@ esp32 wroom
 
 1. 打开Arduino IDE。
 
-2. 在菜单栏中，选择工具 -> 开发板 -> 选择ESP32 Dev Module 或者 ESP32-WROOM-DA Modulle
+2. 安装开发板
+   
+  <img width="500" height="400"  alt="image" src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/f1697c31-b045-4b6a-99e7-46d8cc455f52">
 
-<img width="143" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/9cdddaaa-69ad-4fd2-8f1b-37a29594c37f">
+4. 在菜单栏中，选择工具 -> 开发板 -> 选择 ESP32 Dev Module 或者ESP32-WROOM-DAModule 
 
+<img width="500" height="400" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/9253728e-6351-458c-8716-4339ba717103">
 
-<img width="914" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/1850680e-9e3c-4848-b45d-abac407317e7">
+<img width="500" height="400"  alt="image" src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/10c3795e-cc0b-40d0-ab25-bdfb01d1a2dc">
 
 #### 选择端口
 
+<img src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/767220da-7736-4c88-b92a-ee4bf6ab7a5d" width="300" height="300">
 
-<img src="" width="200" height="150">
+#### 烧入程序引导
+
+<img width="400" height="400" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/bc7d07f6-06b4-41b4-8a33-64971af853a8">
 
 #### 驱动安装
 
-<img width="200" height="150" alt="image" src="">
+<img width="400" height="400"  alt="image" src="https://github.com/liyinchigithub/esp32-wroom-wifi-bluetooth/assets/19643260/2438cd88-b733-4a65-b8da-b8c22a33f8d9">
 
 
 
