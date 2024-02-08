@@ -74,7 +74,7 @@ esp32 wroom
 
 
 
-### 二、（可变速）L287N直流电机（步进器电机驱动板）
+### 二、（可变速）L2898N直流电机（步进器电机驱动板）
 
 <img src="https://github.com/liyinchigithub/esp8266_car_webServer/assets/19643260/4be41a85-daaa-47ba-a8ee-69594b922bd1" width="200" height="550">
 
@@ -136,6 +136,15 @@ L298N电机驱动板通常需要四个控制引脚来驱动一个双电机：
 | IN4 | 18 |
 | ENA | 21 |
 | ENB | 5 |
+
+- <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/c6cf8229-d42e-418b-ba6e-39d747114ce9" width="300" height="300">
+
+- <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/b0baa69a-e7c6-4f62-89a2-0cb22a71cc9d" width="300" height="300">
+
+- <img src="" width="300" height="300">
+
+
+
 
 （2）esp8266
 
