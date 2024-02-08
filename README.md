@@ -5,7 +5,7 @@
 
 <img width="400" height="400" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/1efe9f7c-c1df-422e-a56e-e1f049381c7e">
 
-<img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7" width="300" height="300">
+
 
 ## 材料
 
@@ -13,8 +13,9 @@ ESP32主板1个、步进器1个（电机驱动）、3.7V电池1个（18000mAh）
 
 ### 小车主板
 
-<img width="449" alt="image" src="https://github.com/liyinchigithub/esp8266_car_webServer/assets/19643260/2fcd5151-e3a0-4d4b-9fbe-824e7a37c865">
+- <img width="449" alt="image" src="https://github.com/liyinchigithub/esp8266_car_webServer/assets/19643260/2fcd5151-e3a0-4d4b-9fbe-824e7a37c865">
 
+- <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7" width="300" height="300">
 
 ### 一、ESP32 NodeMCU 单片机
 
