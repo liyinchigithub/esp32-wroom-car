@@ -141,7 +141,7 @@ L298N电机驱动板通常需要四个控制引脚来驱动一个双电机：
 
 - <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/b0baa69a-e7c6-4f62-89a2-0cb22a71cc9d" width="300" height="300">
 
-- <img src="" width="300" height="300">
+- <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/c107cb3b-73f4-4a66-b805-a72469cb6913" width="300" height="300">
 
 
 
