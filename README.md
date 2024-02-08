@@ -2,6 +2,9 @@
 
 嵌入式单片机ESP32Arduino 遥控小车（蓝牙版）
 
+
+<img width="400" height="400" alt="image" src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/1efe9f7c-c1df-422e-a56e-e1f049381c7e">
+
 <img src="https://github.com/liyinchigithub/esp32-wroom-car/assets/19643260/cd957965-efeb-40e5-bd5c-eae7e01446d7" width="300" height="300">
 
 ## 材料
