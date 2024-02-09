@@ -4,6 +4,10 @@
 const char *ssid = "遥控小车";     // WiFi名称
 const char *password = "12345678"; // WiFi密码
 
+// 摇杆
+const int joystickXPin = 34; // VRX
+const int joystickYPin = 35; // VRY
+const int joystickButtonPin = 32; // SW
 // 定义按钮连接的GPIO引脚
 const int buttonForward = 12;  // 前进按钮
 const int buttonBackward = 14; // 后退按钮
@@ -11,6 +15,8 @@ const int buttonLeft = 27;     // 左转按钮
 const int buttonRight = 26;    // 右转按钮
 
 const char *serverUrl = "http://192.168.4.1"; // 服务器端ESP32的IP地址
+
+
 
 void setup()
 {
@@ -28,6 +34,8 @@ void setup()
   pinMode(buttonBackward, INPUT_PULLUP);
   pinMode(buttonLeft, INPUT_PULLUP);
   pinMode(buttonRight, INPUT_PULLUP);
+  // 摇杆
+  // pinMode(joystickButtonPin, INPUT_PULLUP); // 设置摇杆按钮为输入并启用内部上拉电阻
 }
 
 void loop()
@@ -43,7 +51,8 @@ void loop()
   checkButton(buttonBackward, 5, isBackPressed);
   checkButton(buttonLeft, 1, isLeftPressed);
   checkButton(buttonRight, 2, isRightPressed);
-
+  // 读取摇杆值并控制小车
+  controlCarWithJoystick();
   delay(50); // 简单的消抖延时
 }
 
@@ -117,4 +126,31 @@ void sendStopCommand()
     Serial.println(httpResponseCode);
   }
   http.end(); // 结束HTTP连接
+}
+
+void controlCarWithJoystick() {
+  int xValue = analogRead(joystickXPin); // 读取X轴值
+  int yValue = analogRead(joystickYPin); // 读取Y轴值
+  // bool buttonPressed = digitalRead(joystickButtonPin) == LOW; // 读取按钮状态
+
+  // 根据摇杆位置决定动作
+  if (yValue < 1700) { // 前进
+    Serial.println("前进");
+    sendCommand(3);
+  } else if (yValue > 2400) { // 后退
+    Serial.println("后退");
+    sendCommand(5);
+  } else if (xValue < 1700) { // 左转
+  Serial.println("左");
+    sendCommand(1);
+  } else if (xValue > 2400) { // 右转
+  Serial.println("右");
+    sendCommand(2);
+  }
+  //  else if (buttonPressed) { // 按钮被按下
+  //   sendStopCommand();
+  // } 
+  // else {
+  //   sendStopCommand(); // 摇杆在中间位置时停止
+  // }
 }

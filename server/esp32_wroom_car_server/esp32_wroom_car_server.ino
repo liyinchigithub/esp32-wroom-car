@@ -111,9 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <button id="backward" class="blue-button" data-action="5">后</button>
 </div>
 <!-- MJPEG流 -->
-// <div style="margin-top: 20px;">
-//   <img style="display: block; -webkit-user-select: none; margin: auto; background-color: hsl(0, 0%, 25%);" src="http://192.168.4.2/mjpeg/1">
-// </div>
+<!-- <div style="margin-top: 20px;"> -->
+<!-- <img style="display: block; -webkit-user-select: none; margin: auto; background-color: hsl(0, 0%, 25%);" src="http://192.168.4.2/mjpeg/1">y: block; -webkit-user-select: none; margin: auto; background-color: hsl(0, 0%, 25%);" src="http://192.168.4.2/mjpeg/1">
+<!-- </div> -->
+</div>
 </body>
 </html>
 )rawliteral";
@@ -140,6 +141,10 @@ void handleStart() {
     int action = doc["action"].as<int>();
     setMotorState(action, true);  // 开始运动
     server.send(200, "text/plain", "Start action received.");
+
+    // 添加调试输出
+    Serial.print("Start action received: ");
+    Serial.println(action);
   }
 }
 
@@ -148,12 +153,15 @@ void handleStop() {
   if (server.method() == HTTP_POST) {
     stopMotors();  // 停止所有电机
     server.send(200, "text/plain", "Stop action received.");
+
+    // 添加调试输出
+    Serial.println("Stop action received");
   }
 }
 
 // 初始化
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   // 连接WiFi
   // WiFi.begin(ssid, password);
   // Serial.println("Attempting to connect to WiFi network...");
@@ -262,5 +270,10 @@ void setMotorState(int action, bool continuous) {
       stopMotors();
       break;
   }
+
+  // 添加调试输出
+  Serial.print("Motor action: ");
+  Serial.println(action);
+
   // 如果不是长按，不需要在这里停止电机，因为会有单独的停止请求
 }
