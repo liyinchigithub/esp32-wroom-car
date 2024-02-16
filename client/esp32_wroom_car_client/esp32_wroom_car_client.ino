@@ -35,7 +35,7 @@ void setup()
   pinMode(buttonLeft, INPUT_PULLUP);
   pinMode(buttonRight, INPUT_PULLUP);
   // 摇杆
-  // pinMode(joystickButtonPin, INPUT_PULLUP); // 设置摇杆按钮为输入并启用内部上拉电阻
+  pinMode(joystickButtonPin, INPUT_PULLUP); // 设置摇杆按钮为输入并启用内部上拉电阻
 }
 
 void loop()
@@ -131,7 +131,7 @@ void sendStopCommand()
 void controlCarWithJoystick() {
   int xValue = analogRead(joystickXPin); // 读取X轴值
   int yValue = analogRead(joystickYPin); // 读取Y轴值
-  // bool buttonPressed = digitalRead(joystickButtonPin) == LOW; // 读取按钮状态
+  bool buttonPressed = digitalRead(joystickButtonPin) == LOW; // 读取按钮状态
 
   // 根据摇杆位置决定动作
   if (yValue < 1700) { // 前进
@@ -147,10 +147,10 @@ void controlCarWithJoystick() {
   Serial.println("右");
     sendCommand(2);
   }
-  //  else if (buttonPressed) { // 按钮被按下
-  //   sendStopCommand();
-  // } 
-  // else {
-  //   sendStopCommand(); // 摇杆在中间位置时停止
-  // }
+   else if (buttonPressed) { // 按钮被按下
+    sendStopCommand();
+  } 
+  else {
+    sendStopCommand(); // 摇杆在中间位置时停止
+  }
 }
