@@ -229,3 +229,47 @@ L298N电机驱动板通常需要四个控制引脚来驱动一个双电机：
 
 确保连接时不要接错RXD和TXD，因为RXD接收数据，应该连接到ESP32的发送引脚（TXD），反之亦然。此外，不要将5V连接到ESP32，因为这可能会损坏模块。
 
+
+四、调小旋转的幅度
+
+要调整旋转的幅度，可以通过修改controlCarWithJoystick函数中判断摇杆位置的阈值来实现。
+
+代码中，摇杆的X轴值小于1700时判断为左转，大于2400时判断为右转。你可以将这些阈值调整得更接近中心值（通常为2048），以减小识别为旋转的幅度。
+
+例如，可以将阈值调整为：
+
+- 左转的阈值从1700调整为1900
+- 右转的阈值从2400调整为2200
+
+这样，只有当摇杆更接近极端位置时，才会触发旋转命令，从而减小旋转的幅度。
+
+修改后的controlCarWithJoystick函数如下：
+
+```C++
+void controlCarWithJoystick() {
+  int xValue = analogRead(joystickXPin); // 读取X轴值
+  int yValue = analogRead(joystickYPin); // 读取Y轴值
+  bool buttonPressed = digitalRead(joystickButtonPin) == LOW; // 读取按钮状态
+
+  // 根据摇杆位置决定动作
+  if (yValue < 1700) { // 前进
+    Serial.println("前进");
+    sendCommand(3);
+  } else if (yValue > 2400) { // 后退
+    Serial.println("后退");
+    sendCommand(5);
+  } else if (xValue < 1900) { // 左转
+    Serial.println("左");
+    sendCommand(1);
+  } else if (xValue > 2200) { // 右转
+    Serial.println("右");
+    sendCommand(2);
+  }
+  else if (buttonPressed) { // 按钮被按下
+    sendStopCommand();
+  } 
+  else {
+    sendStopCommand(); // 摇杆在中间位置时停止
+  }
+}
+```

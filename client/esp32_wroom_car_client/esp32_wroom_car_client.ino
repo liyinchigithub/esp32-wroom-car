@@ -142,10 +142,10 @@ void controlCarWithJoystick() {
     sendCommand(5);
   } else if (xValue < 1700) { // 左转
   Serial.println("左");
-    sendCommand(1);
+    sendCommand(2);
   } else if (xValue > 2400) { // 右转
   Serial.println("右");
-    sendCommand(2);
+    sendCommand(1);
   }
    else if (buttonPressed) { // 按钮被按下
     sendStopCommand();
